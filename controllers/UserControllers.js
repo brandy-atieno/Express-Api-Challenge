@@ -12,20 +12,29 @@ function home (req,res){
   function getUsers (req,res){
 
 
-    const users={
+     const users={
+        status:200,
+        success:true,
+        message:"Here are the users",
+           }
+    if(users){
+       return res.status(200).json({
         status:200,
         success:true,
         message:"Here are the users",
         data:data
+
+       })
     }
-    res.send(users)
+   
+    else{
     const fail={
         status:200,
         success:true,
-        message:"Here are the users",
+        message:"FAILED TO LOAD",
         data:[]
     }
-    res.send()
+}
   
     }
     function getUser (req, res){
