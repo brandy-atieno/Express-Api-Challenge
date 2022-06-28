@@ -8,16 +8,18 @@ function home (req,res){
    res.send("Welcome")
    
 }  
+  function getUsers (req,res){
+return res.status(200).json({
+    status:200,
+    success:true,
+    message:"Here are the users",
+    result:data
 
+})}
   function getUsers (req,res){
 
 
-     const users={
-        status:200,
-        success:true,
-        message:"Here are the users",
-           }
-    if(users){
+    if(data){
        return res.status(200).json({
         status:200,
         success:true,
